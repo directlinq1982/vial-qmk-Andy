@@ -1,15 +1,22 @@
-VIA_ENABLE = yes
-VIAL_ENABLE = yes
-ENCODER_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 COMBO_ENABLE = yes
 
-# Aggressive space-saving measures
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
+
+# Encoder setup
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = no
+
+# The biggest space saver (Link Time Optimization)
 LTO_ENABLE = yes
-MOUSEKEY_ENABLE = no
-EXTRAKEY_ENABLE = no
+
+# --- AGGRESSIVE SPACE SAVERS ---
+# Turning these off will easily save 1,000+ bytes of flash memory
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
+MUSIC_ENABLE = no
+AUDIO_ENABLE = no
