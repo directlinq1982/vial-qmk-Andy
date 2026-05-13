@@ -18,5 +18,5 @@
 #undef ENCODERS_PAD_B
 
 /* Replace the ?? with the actual Pro Micro pins your right encoder is wired to */
-#define ENCODERS_PAD_A { F5, ?? } 
-#define ENCODERS_PAD_B { F4, ?? }
+#define ENCODERS_PAD_A { F5, D4 } 
+#define ENCODERS_PAD_B { F4, D3 }
