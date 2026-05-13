@@ -11,7 +11,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build Firmware
+            - name: Build Firmware
         run: |
           git config --global --add safe.directory $(pwd)
           qmk compile -kb dumbpad/v1x_dualencoder -km vial
