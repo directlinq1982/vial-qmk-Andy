@@ -1,0 +1,23 @@
+name: Build Vial Firmware
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Set up QMK
+        uses: qmk/setup-qmk@v1
+
+      - name: Compile Firmware
+        run: qmk compile -kb imchipwood/dumbpad/v1x -km vial
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dumbpad-vial-hex
+          path: .build/*.hex
