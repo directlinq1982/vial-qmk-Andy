@@ -14,3 +14,9 @@
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
 
+#undef ENCODERS_PAD_A
+#undef ENCODERS_PAD_B
+
+/* Replace the ?? with the actual Pro Micro pins your right encoder is wired to */
+#define ENCODERS_PAD_A { F5, ?? } 
+#define ENCODERS_PAD_B { F4, ?? }
