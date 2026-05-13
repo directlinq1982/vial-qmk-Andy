@@ -20,4 +20,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dumbpad-vial-firmware
-          path: .build/*.hex
+          path: '*.hex'
+
