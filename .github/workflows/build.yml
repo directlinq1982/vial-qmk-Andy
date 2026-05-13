@@ -14,7 +14,7 @@ jobs:
         uses: qmk/setup-qmk@v1
 
       - name: Compile Firmware
-        run: qmk compile -kb imchipwood/dumbpad/v1x -km vial
+        run: qmk compile -kb dumbpad/v1x_dualencoder -km vial
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
