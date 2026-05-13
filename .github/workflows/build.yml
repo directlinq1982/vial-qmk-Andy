@@ -1,23 +1,23 @@
-name: Build Vial Firmware
+name: Build Dumbpad Vial
 on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: ghcr.io/qmk/qmk_cli:latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Set up QMK
-        uses: qmk/setup-qmk@v1
-
-      - name: Compile Firmware
-        run: qmk compile -kb dumbpad/v1x_dualencoder -km vial
+      - name: Build Firmware
+        run: |
+          git config --global --add safe.directory $(pwd)
+          qmk compile -kb dumbpad/v1x_dualencoder -km vial
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: dumbpad-vial-hex
+          name: dumbpad-vial-firmware
           path: .build/*.hex
