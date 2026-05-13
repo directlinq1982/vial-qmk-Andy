@@ -20,6 +20,4 @@
 #define ENCODER_RESOLUTION 4
 
 // Extreme Space Savers
-#define NO_PRINT
-#define NO_DEBUG
 #define NO_ACTION_ONESHOT
