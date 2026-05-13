@@ -1,15 +1,17 @@
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
-
-# Encoder setup
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = no
 
-# The biggest space saver (Link Time Optimization)
+# The biggest QMK space saver
 LTO_ENABLE = yes
 
-# --- AGGRESSIVE SPACE SAVERS ---
-# Turning these off will easily save 1,000+ bytes of flash memory
+# --- THE FIRMWARE DIET ---
+# Explicitly turning off base Dumbpad defaults
+MOUSEKEY_ENABLE = no
+EXTRAKEY_ENABLE = no
+
+# Aggressive space savers
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
 SPACE_CADET_ENABLE = no
@@ -17,3 +19,8 @@ GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 MUSIC_ENABLE = no
 AUDIO_ENABLE = no
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = no
+
+# The biggest Vial space saver (saves ~1.5KB)
+VIAL_QMK_SETTINGS = no
