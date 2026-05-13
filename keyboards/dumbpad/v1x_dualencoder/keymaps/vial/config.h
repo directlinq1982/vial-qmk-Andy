@@ -11,3 +11,6 @@
 /* 500 bytes allows for exactly 500 characters total across all 20 macros */
 #define DYNAMIC_KEYMAP_MACRO_EEPROM_SIZE 500 
 
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
+
