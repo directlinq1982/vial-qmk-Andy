@@ -15,8 +15,8 @@
 // Encoder Settings
 #undef ENCODER_A_PINS
 #undef ENCODER_B_PINS
-#define ENCODER_A_PINS { F5, D4 } 
-#define ENCODER_B_PINS { F4, D3 }
+#define ENCODERS_PAD_A { D4 } 
+#define ENCODERS_PAD_B { D1 }
 #define ENCODER_RESOLUTION 4
 
 // Extreme Space Savers
