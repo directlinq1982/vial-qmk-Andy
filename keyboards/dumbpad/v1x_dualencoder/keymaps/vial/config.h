@@ -21,10 +21,11 @@
 #define MATRIX_COL_PINS { C6, D7, E6, B4, B5 }
 #define UNUSED_PINS
 
-/* Single rotary encoder */
-#define ENCODERS_PAD_A { B2 }
-#define ENCODERS_PAD_B { D4 }
-// #define ENCODER_DIRECTION_FLIP
+/* Single rotary encoder (Modernized to prevent Redefined errors) */
+#undef ENCODER_A_PINS
+#undef ENCODER_B_PINS
+#define ENCODER_A_PINS { B2 }
+#define ENCODER_B_PINS { D4 }
 #define VIAL_ENCODER_DEFAULT { KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS, KC_LEFT, KC_RGHT, KC_DOWN, KC_UP }
 
 /* Onboard LEDs  */
@@ -32,6 +33,8 @@
 #define LED_01 B1
 #define LED_02 B3
 
-/* Bootmagic - hold down rotary encoder pushbutton while plugging in to enter bootloader */
-#define BOOTMAGIC_LITE_ROW 3
-#define BOOTMAGIC_LITE_COLUMN 0
+/* Bootmagic (Modernized to prevent Redefined errors) */
+#undef BOOTMAGIC_ROW
+#undef BOOTMAGIC_COLUMN
+#define BOOTMAGIC_ROW 3
+#define BOOTMAGIC_COLUMN 0
