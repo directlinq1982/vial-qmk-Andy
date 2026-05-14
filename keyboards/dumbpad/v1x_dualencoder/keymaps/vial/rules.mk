@@ -3,6 +3,7 @@ VIAL_ENABLE = yes
 ENCODER_ENABLE = yes
 ENCODER_MAP_ENABLE = no
 LTO_ENABLE = yes
+VIAL_ENCODERS_ENABLE = yes
 
 # The Final Firmware Diet
 BOOTMAGIC_ENABLE = no
